@@ -9,6 +9,7 @@ const q2ans1 = "Kangaroo";
 const q2ans2 = "React";
 
 let questionNum = 0;
+let correctCount = 0;
 
 
 
