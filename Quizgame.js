@@ -15,7 +15,7 @@ let questionNum = 0;
 let correctCount = 0;
 
 
-
+//Replace the text of the questions and the buttons.
 function replaceText() {
     var element = document.getElementById("questionElement");
     var btnOption1 = document.getElementById("optionbtn1");
@@ -43,3 +43,6 @@ function replaceText() {
     questionNum += 1;
 
 }
+
+
+//Next big step is to implement a way of evaluating the answer. Also a way to update the Correct answer variable.
