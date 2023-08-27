@@ -44,5 +44,9 @@ function replaceText() {
 
 }
 
+function answerClick(ansNum){
+    console.log(ansNum)
+    console.log("ansNum")
+}
 
 //Next big step is to implement a way of evaluating the answer. Also a way to update the Correct answer variable.
