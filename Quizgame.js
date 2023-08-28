@@ -12,7 +12,9 @@ const q3ans1 = "function replaceText()";
 const q3ans2 = "meth replaceText()";
 
 let questionNum = 0;
-let correctCount = 0;
+let correctCount = document.getElementById("correctNum").textContent;
+
+correctCount = Number(correctCount);
 
 
 //Replace the text of the questions and the buttons.
@@ -45,8 +47,12 @@ function replaceText() {
 }
 
 function answerClick(ansNum){
-    console.log(ansNum)
-    console.log("ansNum")
+    console.log(ansNum);
+    
+
+    correctCount += 1;
+    console.log(correctCount);
+    replaceText();
 }
 
 //Next big step is to implement a way of evaluating the answer. Also a way to update the Correct answer variable.
