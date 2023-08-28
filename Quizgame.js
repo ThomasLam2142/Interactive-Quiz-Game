@@ -49,10 +49,21 @@ function replaceText() {
 function answerClick(ansNum){
     console.log(ansNum);
     
-
-    correctCount += 1;
-    console.log(correctCount);
+    answerEvaluate(ansNum,questionNum);
+    
     replaceText();
 }
+
+function answerEvaluate(ansNum,questionNum){
+    if (questionNum == 1){
+        if (ansNum == 1){
+            console.log("Correct");
+        }
+        else{
+            console.log("Wrong");
+        }
+    }
+}
+
 
 //Next big step is to implement a way of evaluating the answer. Also a way to update the Correct answer variable.
