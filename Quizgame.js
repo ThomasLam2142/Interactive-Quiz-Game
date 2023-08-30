@@ -14,7 +14,6 @@ const q3ans2 = "meth replaceText()";
 let questionNum = 0;
 let correctCount = 0;
 
-//correctCount = Number(correctCount);
 
 
 //Replace the text of the questions and the buttons.
@@ -23,6 +22,7 @@ function replaceText() {
     var btnOption1 = document.getElementById("optionbtn1");
     var btnOption2 = document.getElementById("optionbtn2");
     var correctElement = document.getElementById("correctNum");
+    var questionNumElement = document.getElementById("questionNumber");
 
     // Step 3: Use JavaScript to replace the text content of the selected element.
     if (questionNum  == 0) {
@@ -41,8 +41,10 @@ function replaceText() {
         btnOption2.innerText = q3ans2;
     }
     correctElement.textContent = correctCount;
-
+    
     questionNum += 1;
+    
+    questionNumElement.textContent = questionNum;
 
 }
 
