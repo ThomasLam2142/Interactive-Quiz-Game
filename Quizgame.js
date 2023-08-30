@@ -12,9 +12,9 @@ const q3ans1 = "function replaceText()";
 const q3ans2 = "meth replaceText()";
 
 let questionNum = 0;
-let correctCount = document.getElementById("correctNum").textContent;
+let correctCount = 0;
 
-correctCount = Number(correctCount);
+//correctCount = Number(correctCount);
 
 
 //Replace the text of the questions and the buttons.
@@ -22,9 +22,8 @@ function replaceText() {
     var element = document.getElementById("questionElement");
     var btnOption1 = document.getElementById("optionbtn1");
     var btnOption2 = document.getElementById("optionbtn2");
+    var correctElement = document.getElementById("correctNum");
 
-
-    console.log(btnOption1);
     // Step 3: Use JavaScript to replace the text content of the selected element.
     if (questionNum  == 0) {
         element.textContent = question1;
@@ -41,28 +40,67 @@ function replaceText() {
         btnOption1.textContent = q3ans1;
         btnOption2.innerText = q3ans2;
     }
+    correctElement.textContent = correctCount;
 
     questionNum += 1;
 
 }
 
 function answerClick(ansNum){
-    console.log(ansNum);
+    console.log("answer num is " + ansNum);
     
     answerEvaluate(ansNum,questionNum);
-    
     replaceText();
+    
+
 }
 
 function answerEvaluate(ansNum,questionNum){
     if (questionNum == 1){
+        console.log("evaluate question 1");
         if (ansNum == 1){
             console.log("Correct");
+            correctCount += 1;
+            console.log("the correct answer count is " + correctCount);
         }
         else{
             console.log("Wrong");
+            correctCount -= 1;
+            console.log("the correct answer count is " + correctCount);
         }
     }
+
+    if (questionNum == 2){
+        console.log("evaluate question 2");
+        if (ansNum == 2){
+            console.log("Correct");
+            correctCount += 1;
+            console.log("the correct answer count is " + correctCount);
+        }
+        else{
+            console.log("Wrong");
+            correctCount -= 1;
+            console.log("the correct answer count is " + correctCount);
+        }
+    }
+
+    if (questionNum == 3){
+        console.log("evaluate question 2");
+        if (ansNum == 1){
+            console.log("Correct");
+            correctCount += 1;
+            console.log("the correct answer count is " + correctCount);
+        }
+        else{
+            console.log("Wrong");
+            correctCount -= 1;
+            console.log("the correct answer count is " + correctCount);
+        }
+
+        alert('the quiz is complete')
+    }
+
+    
 }
 
 
